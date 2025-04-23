@@ -204,3 +204,104 @@ h1 {
 .change-color:hover {
   background-color: #005fa3;
 }
+
+.js-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  list-style: none;
+  max-width: 1000px; /* или другой размер */
+  margin: 0 auto;
+}
+
+.car-item {
+  border: 1px solid black;
+  flex: 1 1 calc(33.333% - 20px); /* 3 в ряд с учетом gap */
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.car-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* // Repeta */ 
+.tags {
+  outline: 1px solid tomato;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 8px0;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+  user-select: none;
+}
+
+.tags__item {
+  margin: 4px;
+
+}
+
+.tags__btn {
+  border: 1px solid #212121;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 4px 10px 4px;
+
+  font-size: 24px;
+  font-family: inherit;
+  color: #212121;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+}
+
+.tags__btn--active {
+  color: #fff;
+  background-color: #3f51b5;
+}
+
+/* Репета - colorpicker */
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.color-card {
+  flex: 1 1 calc(25% - 16px); /* максимум 4 в ряд */
+  max-width: calc(25% - 16px);
+  min-width: 150px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color-card.is-active {
+transform: perspective(400px) rotateX(10deg);
+}
+
+.color-swatch {
+  height: 100px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.color-meta {
+  padding: 10px;
+  background: #f9f9f9;
+}
